@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据没有 只能重新搞一份, Sky的Hexo博客园">
+    <meta name="keywords" content="数据解构, Sky的Hexo博客园">
     <meta name="description" content="成年人的努力">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据没有 只能重新搞一份 | Sky的Hexo博客园</title>
+    <title>数据解构 | Sky的Hexo博客园</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据没有 只能重新搞一份</h1>
+                    <h1 class="description center-align post-title">数据解构</h1>
                 </div>
             </div>
         </div>
@@ -465,19 +465,94 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h3 id="ES6—数据解构"><a href="#ES6—数据解构" class="headerlink" title="ES6—数据解构"></a><a href="#ES6%E2%80%94%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%84" title="ES6—数据解构"></a>ES6—数据解构</h3><blockquote>
+<p>来同质化的代码 解构赋值表达式的值与表达式右侧(也就是&#x3D;右侧)的值相等，如此一来，在任何可以使用值的地方都可以使用解构赋值表达式<br>–对应，有就有 没有就不存在</p>
+</blockquote>
+<h4 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a><a href="#%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84" title="对象解构"></a>对象解构</h4><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let  myObj = {</span><br><span class="line">    type:'name',</span><br><span class="line">    value:'yongge'</span><br><span class="line">}</span><br><span class="line">let { type, value, name} = myObj</span><br><span class="line">console.log(type)  //</span><br><span class="line">console.log(value) //</span><br><span class="line">console.log(name)  // undefined</span><br></pre></td></tr></tbody></table>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果使用var、let、const解构声明变量，必须要提供初始化程序（也就是等号右侧的值），否则会导致程序抛出语法错误</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>解构出来的变量 一定要是 对象中能够查找到的属性名 当指定的属性不存在时，可以随意定义一个默认值，在属性名称后添加一个等号(&#x3D;)和相应的默认值即可 (直接定义个默认值)<br>如果解构出来的属性在对象中查找不到，值为undefined</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let  myObj = {</span><br><span class="line">    type:'name',</span><br><span class="line">    value:'yongge'</span><br><span class="line">}</span><br><span class="line">let { type, value, name='姓名'} = myObj</span><br><span class="line">console.log(type)  //</span><br><span class="line">console.log(value) //</span><br><span class="line">console.log(name)  //  姓名</span><br></pre></td></tr></tbody></table>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>解构出来的变量虽然是跟属性名称相同，但是他不再是属性，而是外部的变量，这个变量名也可以被修改， 不一定要跟属性同名<br>上面的都是同名的变量 为非同名局部变量赋值<br>假如想要换个变量 右边 大括号里面 重新申明下 xx:oo 旧的名称 : 新的名称</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let  myObj = {</span><br><span class="line">    type:'name',</span><br><span class="line">    value:'yongge'</span><br><span class="line">}</span><br><span class="line">let { type:localType, value:localTValue} = myObj</span><br><span class="line">console.log(localType)  //</span><br><span class="line">console.log(localTValue) //</span><br></pre></td></tr></tbody></table>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h4 id="嵌套对象解构"><a href="#嵌套对象解构" class="headerlink" title="嵌套对象解构"></a><a href="#%E5%B5%8C%E5%A5%97%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84" title="嵌套对象解构"></a>嵌套对象解构</h4><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">let myObj = {</span><br><span class="line">    type:'name',</span><br><span class="line">    value:'yongge',</span><br><span class="line">    child:{</span><br><span class="line">        firstObj:{</span><br><span class="line">            childType:'sex',</span><br><span class="line">            childValue:'nan'</span><br><span class="line">        },</span><br><span class="line">        secondObj:{</span><br><span class="line">            childType:'sex',</span><br><span class="line">            childValue:'nv'</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">let {child:{firstObj:newObj}} = myObj</span><br><span class="line">console.log(newObj)  //</span><br></pre></td></tr></tbody></table>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<blockquote>
+<p>先找一层 在进一层找 可以 点 属性获取值</p>
+</blockquote>
+<h4 id="数组解构"><a href="#数组解构" class="headerlink" title="数组解构"></a><a href="#%E6%95%B0%E7%BB%84%E8%A7%A3%E6%9E%84" title="数组解构"></a>数组解构</h4><blockquote>
+<p>为需要的元素提供变量名</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let colors = ['red','green','blue']</span><br><span class="line">let [firstColor,secondColor] = colors;</span><br><span class="line">console.log(firstColor);//"red"</span><br><span class="line">console.log(secondColor);//"green"</span><br><span class="line"></span><br><span class="line">对于不需要的解构的值</span><br><span class="line"></span><br><span class="line">let [ , ,thirdColor] = colors</span><br><span class="line">console.log(thirdColor);</span><br></pre></td></tr></tbody></table>
+
+<blockquote>
+<p>如果我们先声明了变量，之后也可以直接通过解构赋值修改变量的值。</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let colors = ['red','green','blue'],firstColor = 'black',secondColor = 'yellow';</span><br><span class="line">[firstColor,secondColor] = colors;</span><br><span class="line"></span><br><span class="line">console.log(firstColor);//"red"</span><br><span class="line">console.log(secondColor);//"green"</span><br></pre></td></tr></tbody></table>
+
+<blockquote>
+<p>可以在数组解构赋值表达式中为任意变量添加默认值。注意：：：：只有当该位置在右侧数组中的值不存在时或值为undefined时，默认值才会生效。</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let colors = ['red','green','blue'];</span><br><span class="line">[firstColor,secondColor,thirdColor='orange'] = colors;</span><br><span class="line"></span><br><span class="line">console.log(firstColor);//""</span><br><span class="line">console.log(secondColor);//""</span><br><span class="line">console.log(thirdColor);//""</span><br></pre></td></tr></tbody></table>
+
+<h4 id="嵌套数组解构赋值"><a href="#嵌套数组解构赋值" class="headerlink" title="嵌套数组解构赋值"></a><a href="#%E5%B5%8C%E5%A5%97%E6%95%B0%E7%BB%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC" title="嵌套数组解构赋值"></a>嵌套数组解构赋值</h4><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let arr = [ 10, [ 20, 30 ], 40 ];</span><br><span class="line">console.log( arr[1][1] ); //30</span><br><span class="line"></span><br><span class="line">let [ one, two, three, four ] = arr;</span><br><span class="line">console.log( one, two, three, four ); //</span><br><span class="line"></span><br><span class="line">[ one, [ two, three ], four ] = arr; //</span><br><span class="line">console.log( one, two, three, four ); //10 20 30 40</span><br></pre></td></tr></tbody></table>
+
+<h4 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC" title="字符串的解构赋值"></a>字符串的解构赋值</h4><blockquote>
+<p>字符串也可以解构赋值。这是因为此时，字符串被转换成了一个类似数组的对象。</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const [a, b, c, d, e] = 'hello';</span><br><span class="line">a // "h"</span><br><span class="line">b // "e"</span><br><span class="line">c // "l"</span><br><span class="line">d // "l"</span><br><span class="line">e // "o"</span><br></pre></td></tr></tbody></table>
+
+<blockquote>
+<p>类似数组的对象都有一个length属性，因此还可以对这个属性解构赋值</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let {length : len} = 'hello';</span><br><span class="line">len // 5</span><br></pre></td></tr></tbody></table>
+
+<h4 id="数值和布尔值的解构赋值"><a href="#数值和布尔值的解构赋值" class="headerlink" title="数值和布尔值的解构赋值"></a><a href="#%E6%95%B0%E5%80%BC%E5%92%8C%E5%B8%83%E5%B0%94%E5%80%BC%E7%9A%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC" title="数值和布尔值的解构赋值"></a>数值和布尔值的解构赋值</h4><blockquote>
+<p>解构赋值时，如果等号右边是数值和布尔值，则会先转为对象。  </p>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let {toString: s} = 123;</span><br><span class="line">s === Number.prototype.toString // true</span><br><span class="line"></span><br><span class="line">let {toString: s} = true;</span><br><span class="line">s === Boolean.prototype.toString // true</span><br></pre></td></tr></tbody></table>
+</blockquote>
+<blockquote>
+<p>上面代码中，数值和布尔值的包装对象都有toString属性，因此变量s都能取到值。</p>
+</blockquote>
+<blockquote>
+<p>解构赋值的规则是，只要等号右边的值不是对象，就先将其转为对象。由于undefined和null无法转为对象，所以对它们进行解构赋值，都会报错。</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let { prop: x } = undefined; // TypeError</span><br><span class="line">let { prop: y } = null; // TypeError</span><br></pre></td></tr></tbody></table>
+
+<h4 id="解构交换变量值"><a href="#解构交换变量值" class="headerlink" title="解构交换变量值"></a><a href="#%E8%A7%A3%E6%9E%84%E4%BA%A4%E6%8D%A2%E5%8F%98%E9%87%8F%E5%80%BC" title="解构交换变量值"></a>解构交换变量值</h4><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let a =10 , b = 8;</span><br><span class="line">[a,b]=[b,a]</span><br><span class="line">console.log(a,b)</span><br></pre></td></tr></tbody></table>
+
+<h4 id="解构中的不定参数-…"><a href="#解构中的不定参数-…" class="headerlink" title="解构中的不定参数(…)"></a><a href="#%E8%A7%A3%E6%9E%84%E4%B8%AD%E7%9A%84%E4%B8%8D%E5%AE%9A%E5%8F%82%E6%95%B0-%E2%80%A6" title="解构中的不定参数(…)"></a>解构中的不定参数(…)</h4><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr =[10,20,30]</span><br><span class="line">let [first,...others ] = arr</span><br><span class="line">console.log(first,others)</span><br></pre></td></tr></tbody></table>
+
+<blockquote>
+<p>复制数组</p>
+</blockquote>
+<p>ES5  </p>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [ 10, 20, 30 ];</span><br><span class="line">let newArr = arr.concat();</span><br><span class="line">console.log( newArr );</span><br></pre></td></tr></tbody></table>
+
+<blockquote>
+<p>用解构与不定参数结合 复制 数组</p>
+</blockquote>
+<p>ES6</p>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [ 10, 20, 30 ];</span><br><span class="line">let [...newArr] = arr;</span><br><span class="line">console.log( newArr );</span><br></pre></td></tr></tbody></table>
+
+<h4 id="解构表达式传参"><a href="#解构表达式传参" class="headerlink" title="解构表达式传参"></a><a href="#%E8%A7%A3%E6%9E%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BC%A0%E5%8F%82" title="解构表达式传参"></a>解构表达式传参</h4><blockquote>
+<p>方法 可以接受 解构表达式</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function show ({name,age}){</span><br><span class="line">    console.log(name,age)</span><br><span class="line">}</span><br><span class="line">let obj = {</span><br><span class="line">    name:'yongge',</span><br><span class="line">    age:'28'</span><br><span class="line">}</span><br><span class="line">show (obj)    //函数里面可以写成表达式 {name，age} = obj</span><br><span class="line"></span><br><span class="line">function add([x, y]){</span><br><span class="line">return x + y;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">add([1, 2]); // 3</span><br></pre></td></tr></tbody></table>
+
+<blockquote>
+<p>函数show,add的参数表面上是一个数组，但在传入参数的那一刻，数组参数就被解构成变量x和y。对于函数内部的代码来说，它们能感受到的参数就是x和y。</p>
+</blockquote>
 
                 
             </div>
@@ -504,7 +579,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shiyongjason.github.io/2023/01/11/hello-world/">https://shiyongjason.github.io/2023/01/11/hello-world/</a>
+                    <a href="https://shiyongjason.github.io/2023/01/11/%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%84/">https://shiyongjason.github.io/2023/01/11/%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -713,13 +788,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/01/11/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/">
+                <a href="/2023/01/11/Symbol/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="CSS3新特性">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Symbol">
                         
-                        <span class="card-title">CSS3新特性</span>
+                        <span class="card-title">Symbol</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -747,16 +822,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/01/11/hello-world/">
+                <a href="/2023/01/11/js-%E5%8F%98%E9%87%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="数据没有 只能重新搞一份">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="js 变量">
                         
-                        <span class="card-title">数据没有 只能重新搞一份</span>
+                        <span class="card-title">js 变量</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -777,7 +852,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
