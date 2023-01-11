@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据没有 只能重新搞一份, Sky的Hexo博客园">
+    <meta name="keywords" content="postMessage, Sky的Hexo博客园">
     <meta name="description" content="成年人的努力">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据没有 只能重新搞一份 | Sky的Hexo博客园</title>
+    <title>postMessage | Sky的Hexo博客园</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据没有 只能重新搞一份</h1>
+                    <h1 class="description center-align post-title">postMessage</h1>
                 </div>
             </div>
         </div>
@@ -465,19 +465,41 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="vue内嵌iframe并跨域通信"><a href="#vue内嵌iframe并跨域通信" class="headerlink" title="vue内嵌iframe并跨域通信"></a><a href="#vue%E5%86%85%E5%B5%8Ciframe%E5%B9%B6%E8%B7%A8%E5%9F%9F%E9%80%9A%E4%BF%A1" title="vue内嵌iframe并跨域通信"></a>vue内嵌iframe并跨域通信</h2><h4 id="近期做新老boss跳转页面-老boss使用sessionStorage存储数据-总结一下遇到的问题"><a href="#近期做新老boss跳转页面-老boss使用sessionStorage存储数据-总结一下遇到的问题" class="headerlink" title="近期做新老boss跳转页面,老boss使用sessionStorage存储数据,总结一下遇到的问题"></a><a href="#%E8%BF%91%E6%9C%9F%E5%81%9A%E6%96%B0%E8%80%81boss%E8%B7%B3%E8%BD%AC%E9%A1%B5%E9%9D%A2-%E8%80%81boss%E4%BD%BF%E7%94%A8sessionStorage%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE-%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98" title="近期做新老boss跳转页面,老boss使用sessionStorage存储数据,总结一下遇到的问题"></a>近期做新老boss跳转页面,老boss使用sessionStorage存储数据,总结一下遇到的问题</h4><p>sessionStorage生命周期为当前窗口或标签页，一旦窗口或标签页被永久关闭了，那么所有通过sessionStorage存储的数据也就被清空了。不同浏览器无法共享localStorage或sessionStorage中的信息。相同浏览器的不同页面间可以共享相同的 localStorage（页面属于相同域名和端口），但是不同页面或标签页间无法共享sessionStorage的信息。这里需要注意的是，页面及标 签页仅指顶级窗口，如果一个标签页包含多个iframe标签且他们属于同源页面，那么他们之间是可以共享sessionStorage的。</p>
+<h4 id="同源的判断规则："><a href="#同源的判断规则：" class="headerlink" title="同源的判断规则："></a><a href="#%E5%90%8C%E6%BA%90%E7%9A%84%E5%88%A4%E6%96%AD%E8%A7%84%E5%88%99%EF%BC%9A" title="同源的判断规则："></a>同源的判断规则：</h4><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http://www.test.com</span><br><span class="line">https://www.test.com （不同源，因为协议不同）</span><br><span class="line">http://my.test.com（不同源，因为主机名不同）</span><br><span class="line">http://www.test.com:8080（不同源，因为端口不同）</span><br></pre></td></tr></tbody></table>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h4 id="在此项目原先只用document-cookie-没成功，使用了ifram跨域通信去解决，使用的技术是window-postMessage"><a href="#在此项目原先只用document-cookie-没成功，使用了ifram跨域通信去解决，使用的技术是window-postMessage" class="headerlink" title="在此项目原先只用document.cookie 没成功，使用了ifram跨域通信去解决，使用的技术是window.postMessage"></a><a href="#%E5%9C%A8%E6%AD%A4%E9%A1%B9%E7%9B%AE%E5%8E%9F%E5%85%88%E5%8F%AA%E7%94%A8document-cookie-%E6%B2%A1%E6%88%90%E5%8A%9F%EF%BC%8C%E4%BD%BF%E7%94%A8%E4%BA%86ifram%E8%B7%A8%E5%9F%9F%E9%80%9A%E4%BF%A1%E5%8E%BB%E8%A7%A3%E5%86%B3%EF%BC%8C%E4%BD%BF%E7%94%A8%E7%9A%84%E6%8A%80%E6%9C%AF%E6%98%AFwindow-postMessage" title="在此项目原先只用document.cookie 没成功，使用了ifram跨域通信去解决，使用的技术是window.postMessage"></a>在此项目原先只用document.cookie 没成功，使用了ifram跨域通信去解决，使用的技术是window.postMessage</h4><p>参考文档： <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage">https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage</a></p>
+<blockquote>
+<p>1、先在vue引入iframe</p>
+</blockquote>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">   &lt;template&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"act-form"</span>&gt;</span><br><span class="line">        &lt;iframe :src=<span class="string">"src"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span></span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>template&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> {</span><br><span class="line">    data () {</span><br><span class="line">        <span class="keyword">return</span> {</span><br><span class="line">        src: <span class="string">'你的src'</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    }</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">```  </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&gt;2、操作iframe获取其对象 </span></span><br><span class="line"><span class="regexp">``` javascript</span></span><br><span class="line"><span class="regexp">mounted () {</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ 这里就拿到了iframe的对象</span></span><br><span class="line"><span class="regexp">    this.$refs.iframe</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ 这里就拿到了iframe的window对象</span></span><br><span class="line"><span class="regexp">    this.$refs.iframe.contentWindow</span></span><br><span class="line"><span class="regexp">  }</span></span><br></pre></td></tr></tbody></table>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p><img src="/img/iframe1.png"></p>
+<blockquote>
+<p>3、vue里面嵌入iframe开始向其传递数据</p>
+</blockquote>
+<hr>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**这里用到了<span class="selector-tag">postMessage</span>   写法 <span class="selector-tag">otherWindow</span><span class="selector-class">.postMessage</span>(<span class="selector-tag">message</span>, <span class="selector-tag">targetOrigin</span>, <span class="selector-attr">[transfer]</span>)**</span><br></pre></td></tr></tbody></table>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>[otherWindow]</p>
+<blockquote>
+<p>其他窗口的一个引用，比如iframe的contentWindow属性、执行window.open返回的窗口对象、或者是命名过或数值索引的window.frames。</p>
+</blockquote>
+<p>[message]</p>
+<blockquote>
+<p>将要发送到其他 window的数据。它将会被结构化克隆算法序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化</p>
+</blockquote>
+<p>[targetOrigin]</p>
+<blockquote>
+<p>通过窗口的origin属性来指定哪些窗口能接收到消息事件，其值可以是字符串<em>（表示无限制）或者一个URI。在发送消息的时候，如果目标窗口的协议、主机地址或端口这三者的任意一项不匹配targetOrigin提供的值，那么消息就不会被发送；只有三者完全匹配，消息才会被发送。这个机制用来控制消息可以发送到哪些窗口；例如，当用postMessage传送密码时，这个参数就显得尤为重要，必须保证它的值与这条包含密码的信息的预期接受者的origin属性完全一致，来防止密码被恶意的第三方截获。如果你明确的知道消息应该发送到哪个窗口，那么请始终提供一个有确切值的targetOrigin，而不是</em>。不提供确切的目标将导致数据泄露到任何对数据感兴趣的恶意站点。</p>
+</blockquote>
+<hr>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">methods: {</span><br><span class="line">    sendMessage (userData) {</span><br><span class="line">        <span class="comment">// 外部vue向iframe内部传数据</span></span><br><span class="line">        <span class="keyword">this</span>.iframeWin.postMessage({</span><br><span class="line">           <span class="comment">// cmd: 'getFormJson',</span></span><br><span class="line">            params: userData</span><br><span class="line">        }, <span class="string">'*'</span>)</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>这里通过点击事件触发，向iframe发送信息，iframe内部通过如下去处理这条数据</p>
+<table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 接受父页面发来的信息</span></span><br><span class="line">       <span class="built_in">window</span>.addEventListener(<span class="string">"message"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>{</span><br><span class="line">	<span class="keyword">const</span> data = event.data.params</span><br><span class="line">	sessionStorage.setItem(<span class="string">"user_data"</span>,<span class="built_in">JSON</span>.stringify(data.data));</span><br><span class="line">	sessionStorage.setItem(<span class="string">"listAuth_data"</span>,<span class="built_in">JSON</span>.stringify(data.data.listAuth));</span><br><span class="line">       });</span><br></pre></td></tr></tbody></table>
+
+<p><img src="/img/iframe2.png"><br>此时已经完全解决这些跨域的参数通信，注意的就是 * 有指定的域名最好指定 安全为上！</p>
 
                 
             </div>
@@ -504,7 +526,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shiyongjason.github.io/2023/01/11/hello-world/">https://shiyongjason.github.io/2023/01/11/hello-world/</a>
+                    <a href="https://shiyongjason.github.io/2023/01/11/postMessage/">https://shiyongjason.github.io/2023/01/11/postMessage/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -713,13 +735,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/01/11/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/">
+                <a href="/2023/01/11/%E5%9B%BE%E7%89%87%E6%B0%B4%E5%8D%B0%E7%94%9F%E6%88%90/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="CSS3新特性">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="图片水印生成">
                         
-                        <span class="card-title">CSS3新特性</span>
+                        <span class="card-title">图片水印生成</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -747,16 +769,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/01/11/hello-world/">
+                <a href="/2023/01/11/Symbol/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="数据没有 只能重新搞一份">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Symbol">
                         
-                        <span class="card-title">数据没有 只能重新搞一份</span>
+                        <span class="card-title">Symbol</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -777,7 +799,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
