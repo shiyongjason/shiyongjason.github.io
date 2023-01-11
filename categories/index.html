@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数组排序, Sky的Hexo博客园">
-    <meta name="description" content="sort()123456var array = [1,4,-8,-3,6,12,9,8];function compare(val1,val2){    return val1-val2;};array.sort(compare);docu">
+    <meta name="keywords" content="Categories, Sky的Hexo博客园">
+    <meta name="description" content="成年人的努力">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数组排序 | Sky的Hexo博客园</title>
+    <title>Categories | Sky的Hexo博客园</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数组排序</h1>
+                    <h1 class="description center-align post-title">categories</h1>
                 </div>
             </div>
         </div>
@@ -353,21 +353,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a><a href="#sort" title="sort()"></a>sort()</h3><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">4</span>,<span class="number">-8</span>,<span class="number">-3</span>,<span class="number">6</span>,<span class="number">12</span>,<span class="number">9</span>,<span class="number">8</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">val1,val2</span>)</span>{</span><br><span class="line">    <span class="keyword">return</span> val1-val2;</span><br><span class="line">};</span><br><span class="line">array.sort(compare);</span><br><span class="line"><span class="built_in">document</span>.write(array);<span class="comment">// -8 -3 1 4...</span></span><br></pre></td></tr></tbody></table>
-
-<p>sort()方法按照升序排列数组项，会调用每个数组项的toString()转型方法，然后比较得到的字符串。</p>
-<p>toString()方法是把布尔值或BooleanObject转换为字符串，并返回结果。</p>
-<p>compare()函数方法是一个比较函数，作为sort()方法的参数。</p>
-<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a><a href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F" title="冒泡排序"></a>冒泡排序</h3><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">	var array = [1,4,-8,-3,6,12,9,8];</span><br><span class="line">	function sort(arr){</span><br><span class="line">		for(var j =0; j&lt;arr.length;j++){</span><br><span class="line">			for(var i=0;i&lt;arr.length-1-j;i++){</span><br><span class="line">				if(arr[i]&gt;arr[i+1]){</span><br><span class="line">	                var temp = arr[i];</span><br><span class="line">	                arr[i] = arr[i+1];</span><br><span class="line">	                arr[i+1] = temp;</span><br><span class="line">	            }</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">	}	</span><br><span class="line">sort(array);</span><br><span class="line">document.write(array);</span><br></pre></td></tr></tbody></table>
-
-<p>（1）比较相邻的元素。如果第一个比第二个大，就交换他们两个位置。<br>（2）对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。<br>（3）针对所有的元素重复以上的步骤，除了最后一个。<br>（4）持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</p>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a><a href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F" title="快速排序"></a>快速排序</h3><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var array = [1,4,-8,-3,6,12,9,8];</span><br><span class="line">function quickSort(arr){</span><br><span class="line">//如果数组长度小于等于1，则返回数组本身</span><br><span class="line">    if(arr.length&lt;=1){</span><br><span class="line">        return arr;</span><br><span class="line">    }</span><br><span class="line">    //定义中间值的索引</span><br><span class="line">    var index = Math.floor(arr.length/2);</span><br><span class="line">    //取到中间值</span><br><span class="line">    var temp = arr.splice(index,1);</span><br><span class="line">    //定义左右部分数组</span><br><span class="line">    var left = [];</span><br><span class="line">    var right = [];</span><br><span class="line">    for(var i=0;i&lt;arr.length;i++){</span><br><span class="line">    //如果元素比中间值小，那么放在左边，否则放右边</span><br><span class="line">        if(arr[i]&lt;temp){</span><br><span class="line">            left.push(arr[i]);</span><br><span class="line">        }else{</span><br><span class="line">            right.push(arr[i]);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    return quickSort(left).concat(temp,quickSort(right));</span><br><span class="line">}</span><br><span class="line">document.write(quickSort(array));</span><br></pre></td></tr></tbody></table>
-
-<p>Math.floor(x)方法是向下取整，返回小于或等于x的最接近的整数。</p>
-<p>splice(index,num,item)方法是向数组中添加项目，或是从数组中删除项目，并返回被删除的项目。</p>
-<p>index是整数，被操作项目所在的位置（必须）<br>num是整数，要删除的项目的数量，如果为0，表示不删除（必须）<br>item是向数组中添加的新项目，可以是多个（可选）<br>push()方法是向数组末尾添加一个或多个新项目并返回新数组的长度</p>
-<p>concat()方法连接两个或多个数组，不会改变原有数组，返回一个新数组</p>
-
+                
                 
             </div>
             <hr/>
@@ -393,7 +379,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shiyongjason.github.io/2023/01/11/%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F/">https://shiyongjason.github.io/2023/01/11/%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F/</a>
+                    <a href="https://shiyongjason.github.io/categories/index.html">https://shiyongjason.github.io/categories/index.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -507,54 +493,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2023/01/11/%E9%97%AD%E5%8C%85-%E5%8F%98%E9%87%8F/">
+                <a href="/categories/index.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="闭包 变量">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
                         
-                        <span class="card-title">闭包 变量</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-11
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Sky
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/01/11/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="CSS3新特性">
-                        
-                        <span class="card-title">CSS3新特性</span>
+                        <span class="card-title">categories</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -575,6 +525,45 @@
                         </span>
                     </div>
                 </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Current&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/categories/index.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        
+                        <span class="card-title">categories</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Sky
+                            
+                        </span>
+                    </div>
+                </div>
+
                 
             </div>
         </div>
