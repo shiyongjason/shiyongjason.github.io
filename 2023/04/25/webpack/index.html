@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据没有 只能重新搞一份, Sky的Hexo博客园">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="webpack, Sky的Hexo博客园">
+    <meta name="description" content="1： 常见配置 1、文件打包的出口和入库 2、webpack如何开启一台服务 3、webpack如何打包图片，静态资源等 4、
+安装12npm i webpack webpack-cli -D(开发 生产不要下载)
+
+
+
+入口文件 src&amp;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据没有 只能重新搞一份 | Sky的Hexo博客园</title>
+    <title>webpack | Sky的Hexo博客园</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -291,12 +296,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据没有 只能重新搞一份</h1>
+                    <h1 class="description center-align post-title">webpack</h1>
                 </div>
             </div>
         </div>
@@ -318,9 +323,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/webpack/">
+                                <span class="chip bg-color">webpack</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -332,7 +341,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-01-11
+                    2023-04-25
                 </div>
                 
 
@@ -353,19 +362,68 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="1：-常见配置"><a href="#1：-常见配置" class="headerlink" title="1： 常见配置"></a>1： 常见配置</h2><p> 1、文件打包的出口和入库<br> 2、webpack如何开启一台服务<br> 3、webpack如何打包图片，静态资源等<br> 4、</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i webpack webpack-cli -D</span><br><span class="line">(开发 生产不要下载)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p><img src="/img/webpack1.png" alt="image"></p>
+<ul>
+<li>入口文件 src&#x2F;</li>
+<li>出口 dist&#x2F;</li>
+</ul>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><ul>
+<li>scripts</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">&quot;build&quot;: &quot;webpack&quot;,</span><br><span class="line">&quot;watch&quot;: &quot;webpack --watch&quot;,</span><br><span class="line">&quot;dev&quot;: &quot;webpack-dev-server&quot;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="webpack-配置-入-出口"><a href="#webpack-配置-入-出口" class="headerlink" title="webpack 配置 入 出口"></a>webpack 配置 入 出口</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  entry : &#x27;./src/index.js&#x27;  // 配置打包入口文件</span><br><span class="line">  output : &#123; // 配置打包完成的出口文件 路径 </span><br><span class="line">    path : path.resolve(__dirname , &#x27;./dist/&#x27;),</span><br><span class="line">    filename : &#x27;building.js&#x27;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>优化输出的文件名称，为了缓存 hash，自动引入到html 里面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D html-webpack-plugin</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="多入口文件"><a href="#多入口文件" class="headerlink" title="多入口文件"></a>多入口文件</h4><blockquote>
+<p>多入口文件如何开发</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">plugins:[</span><br><span class="line">      new HtmlWebpackPlugin(&#123;</span><br><span class="line">        template:path.resolve(__dirname,&#x27;../public/index.html&#x27;),</span><br><span class="line">        filename:&#x27;index.html&#x27;,</span><br><span class="line">        chunks:[&#x27;main&#x27;] // 与入口文件对应的模块名</span><br><span class="line">      &#125;),</span><br><span class="line">      new HtmlWebpackPlugin(&#123;</span><br><span class="line">        template:path.resolve(__dirname,&#x27;../public/header.html&#x27;),</span><br><span class="line">        filename:&#x27;header.html&#x27;,</span><br><span class="line">        chunks:[&#x27;header&#x27;] // 与入口文件对应的模块名</span><br><span class="line">      &#125;),</span><br><span class="line">    ]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如图<br><img src="/img/webpack2.png" alt="image"></p>
+<blockquote>
+<p>每次执行npm run build 会发现dist文件夹里会残留上次打包的文件，这里我们推荐一个plugin来帮我们在打包输出前清空文件夹clean-webpack-plugin, </p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const &#123;CleanWebpackPlugin&#125; = require(&#x27;clean-webpack-plugin&#x27;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="css-解析"><a href="#css-解析" class="headerlink" title="css 解析"></a>css 解析</h4><blockquote>
+<p>要一些loader来解析我们的css文件</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm i -D style-loader css-loader</span><br><span class="line">或者</span><br><span class="line">npm i -D less less-loader</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/img/webpack22.png" alt="image"><br><img src="/img/webpack222.png" alt="image"></p>
+<blockquote>
+<p>实现css3代码自动补全，也可以运用到sass、less</p>
+</blockquote>
+<p>1、 display: flex;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line"><span class="attribute">display</span>: -ms-flexbox;</span><br><span class="line"><span class="attribute">display</span>: flex;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这时候我们发现css通过style标签的方式添加到了html文件中，但是如果样式文件很多，全部添加到html中，难免显得混乱。这时候我们想用把css拆分出来用外链的形式引入css文件怎么做呢？</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D mini-css-extract-plugin</span><br></pre></td></tr></table></figure>
+<p>图片</p>
+<blockquote>
+<p>拆分多个css 【mini-css-extract-plugin会将所有的css样式合并为一个css文件】</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--npm i -D extract-text-webpack-plugin@next--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如图<br><img src="/img/webpack3.png" alt="image"></p>
+<h4 id="打包-图片、字体、媒体、等文件"><a href="#打包-图片、字体、媒体、等文件" class="headerlink" title="打包 图片、字体、媒体、等文件"></a>打包 图片、字体、媒体、等文件</h4><p>1、file-loader<br>2、url-loader</p>
+<p>如图<br><img src="/img/webpack4.png" alt="image"></p>
+<h4 id="babel-转义-js"><a href="#babel-转义-js" class="headerlink" title="babel 转义 js"></a>babel 转义 js</h4><blockquote>
+<p>为了使我们的js代码兼容更多的环境我们需要安装依赖</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D babel-loader @babel/preset-env @babel/core</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// webpack.config.js</span><br><span class="line">module.exports = &#123;</span><br><span class="line">    // 省略其它配置 ...</span><br><span class="line">    module:&#123;</span><br><span class="line">        rules:[</span><br><span class="line">          &#123;</span><br><span class="line">            test:/\.js$/,</span><br><span class="line">            use:&#123;</span><br><span class="line">              loader:&#x27;babel-loader&#x27;,</span><br><span class="line">              options:&#123;</span><br><span class="line">                presets:[&#x27;@babel/preset-env&#x27;]</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            exclude:/node_modules/</span><br><span class="line">          &#125;,</span><br><span class="line">       ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如图<br><img src="/img/webpack5.png" alt="image"></p>
+<p>es6&#x2F;7&#x2F;8 语法转成es5，但是对新api并不会转换 例如(promise、Generator、Set、Maps、Proxy等)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i @babel/polyfill</span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -392,7 +450,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shiyongjason.github.io/2023/01/11/hello-world/">https://shiyongjason.github.io/2023/01/11/hello-world/</a>
+                    <a href="https://shiyongjason.github.io/2023/04/25/webpack/">https://shiyongjason.github.io/2023/04/25/webpack/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -429,7 +487,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/webpack/">
+                                    <span class="chip bg-color">webpack</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -506,9 +568,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/04/25/webpack/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="webpack">
+                        
+                        <span class="card-title">webpack</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Sky
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/webpack/">
+                        <span class="chip bg-color">webpack</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2023/04/04/map-or-set/">
                     <div class="card-image">
@@ -526,9 +635,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -544,43 +653,6 @@
                         <span class="chip bg-color">map  set</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/01/11/%E5%9B%BE%E7%89%87%E6%B0%B4%E5%8D%B0%E7%94%9F%E6%88%90/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="图片水印生成">
-                        
-                        <span class="card-title">图片水印生成</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-11
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Sky
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>

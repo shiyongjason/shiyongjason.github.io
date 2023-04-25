@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据没有 只能重新搞一份, Sky的Hexo博客园">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="map or set, Sky的Hexo博客园">
+    <meta name="description" content="MapMap本身是一个构造函数1、Map是一组键值对的结构，具有极快的查找速度。
+1234var m = new Map([[&amp;#x27;Michael&amp;#x27;, 95], [&amp;#x27;Bob&amp;#x27;, 75], [&amp;#x27;T">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据没有 只能重新搞一份 | Sky的Hexo博客园</title>
+    <title>map or set | Sky的Hexo博客园</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -291,12 +292,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据没有 只能重新搞一份</h1>
+                    <h1 class="description center-align post-title">map or set</h1>
                 </div>
             </div>
         </div>
@@ -318,9 +319,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/map-set/">
+                                <span class="chip bg-color">map  set</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -332,7 +337,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-01-11
+                    2023-04-04
                 </div>
                 
 
@@ -353,20 +358,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p>Map本身是一个构造函数<br>1、Map是一组键值对的结构，具有极快的查找速度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var m = new Map([[&#x27;Michael&#x27;, 95], [&#x27;Bob&#x27;, 75], [&#x27;Tracy&#x27;, 85]]);</span><br><span class="line"></span><br><span class="line">m.get(&#x27;Michael&#x27;); // 95</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>对于初始化 一个  new Map  空的  常用 api</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var m = new Map(); // 空Map</span><br><span class="line"></span><br><span class="line">m.set(&#x27;Adam&#x27;, 67); // 添加新的key-value</span><br><span class="line"></span><br><span class="line">m.set(&#x27;Bob&#x27;, 59);</span><br><span class="line"></span><br><span class="line">m.has(&#x27;Adam&#x27;); // 是否存在key &#x27;Adam&#x27;: true</span><br><span class="line"></span><br><span class="line">m.get(&#x27;Adam&#x27;); // 67   Adam 对应value</span><br><span class="line"></span><br><span class="line">m.delete(&#x27;Adam&#x27;); // 删除key &#x27;Adam&#x27;</span><br><span class="line"></span><br><span class="line">m.get(&#x27;Adam&#x27;); // undefined</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>** 由于一个key只能对应一个value，所以，多次对一个key放入value，后面的值会把前面的值冲掉：**</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var m = new Map();</span><br><span class="line"></span><br><span class="line">m.set(&#x27;Adam&#x27;, 67);</span><br><span class="line"></span><br><span class="line">m.set(&#x27;Adam&#x27;, 88);</span><br><span class="line"></span><br><span class="line">m.get(&#x27;Adam&#x27;); // 88</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>使用 for..of 方法迭代 Map</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var myMap = new Map();</span><br><span class="line">myMap.set(0, &quot;zero&quot;);</span><br><span class="line">myMap.set(1, &quot;one&quot;);</span><br><span class="line">for (var [key, value] of myMap) &#123;</span><br><span class="line">  console.log(key + &quot; = &quot; + value);</span><br><span class="line">&#125;</span><br><span class="line">// 将会显示两个log。一个是&quot;0 = zero&quot;另一个是&quot;1 = one&quot;</span><br><span class="line"></span><br><span class="line">for (var key of myMap.keys()) &#123;</span><br><span class="line">  console.log(key);</span><br><span class="line">&#125;</span><br><span class="line">// 将会显示两个log。 一个是 &quot;0&quot; 另一个是 &quot;1&quot;</span><br><span class="line"></span><br><span class="line">for (var value of myMap.values()) &#123;</span><br><span class="line">  console.log(value);</span><br><span class="line">&#125;</span><br><span class="line">// 将会显示两个log。 一个是 &quot;zero&quot; 另一个是 &quot;one&quot;</span><br><span class="line"></span><br><span class="line">for (var [key, value] of myMap.entries()) &#123;</span><br><span class="line">  console.log(key + &quot; = &quot; + value);</span><br><span class="line">&#125;</span><br><span class="line">// 将会显示两个log。 一个是 &quot;0 = zero&quot; 另一个是 &quot;1 = one&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>使用  forEach  迭代 Map</p>
+<p>json转map</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let json = &#123;&quot;name&quot;:&quot;ES6&quot;,&quot;day&quot;:&quot;2014&quot;,&quot;feature&quot;:&quot;新特性&quot;&#125;;</span><br><span class="line">//json 2 map</span><br><span class="line">let map = new Map();</span><br><span class="line">for(let i in json)&#123;</span><br><span class="line">	map.set(i,json[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>map转json</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//map 2 json</span><br><span class="line">let map = new Map();</span><br><span class="line">map.set(&quot;name&quot;,&quot;ES6&quot;);</span><br><span class="line">map.set(&quot;day&quot;,&quot;2014&quot;);</span><br><span class="line">map.set(&quot;feature&quot;,&quot;新特性&quot;);</span><br><span class="line">let json = &#123;&#125;;</span><br><span class="line">for(let [k,v] of map)&#123;</span><br><span class="line">	json[k]=v;</span><br><span class="line">&#125;</span><br><span class="line">console.log(json);</span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>
@@ -392,7 +401,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shiyongjason.github.io/2023/01/11/hello-world/">https://shiyongjason.github.io/2023/01/11/hello-world/</a>
+                    <a href="https://shiyongjason.github.io/2023/04/04/map-or-set/">https://shiyongjason.github.io/2023/04/04/map-or-set/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -429,7 +438,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/map-set/">
+                                    <span class="chip bg-color">map  set</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -510,13 +523,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/04/04/map-or-set/">
+                <a href="/2023/04/25/webpack/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="map or set">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="webpack">
                         
-                        <span class="card-title">map or set</span>
+                        <span class="card-title">webpack</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -527,7 +540,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-25
                         </span>
                         <span class="publish-author">
                             
@@ -540,8 +553,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/map-set/">
-                        <span class="chip bg-color">map  set</span>
+                    <a href="/tags/webpack/">
+                        <span class="chip bg-color">webpack</span>
                     </a>
                     
                 </div>
@@ -555,13 +568,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/01/11/%E5%9B%BE%E7%89%87%E6%B0%B4%E5%8D%B0%E7%94%9F%E6%88%90/">
+                <a href="/2023/01/11/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="图片水印生成">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="数据没有 只能重新搞一份">
                         
-                        <span class="card-title">图片水印生成</span>
+                        <span class="card-title">数据没有 只能重新搞一份</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
